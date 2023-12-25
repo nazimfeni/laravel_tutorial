@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+//imports the UserController class from the App\Http\Controllers 
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+//Route::get is a method provided by Laravel's routing system to define a route for handling HTTP GET requests.
 Route::get('/datapass/{id}', function ($id) {
 
     return view('datapass',['id'=>$id]);
@@ -21,3 +24,5 @@ Route::get('/datapass/{id}', function ($id) {
 Route::view('/', '/home');
 Route::view('/contact', '/contact');
 Route::view('/about', '/about');
+
+Route::get('user',[UserController::class,'show']);

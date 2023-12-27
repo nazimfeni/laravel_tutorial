@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/datapass/{id}', function ($id) {
+Route::get('/', function (){
 
-    return view('datapass',['id'=>$id]);
+    return view('welcome');
 });
 
-Route::view('/', '/home');
-Route::view('/contact', '/contact');
-Route::view('/about', '/about');
+
+Route::view('users','users');
+Route::view('about','about');

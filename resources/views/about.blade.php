@@ -1,1 +1,4 @@
-<h1>About Page</h1>
+@foreach ($data as $value)
+
+    <p>{{ $value }}</p>
+@endforeach

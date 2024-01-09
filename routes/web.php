@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UsersController;
+
+use App\Http\Controllers\UserController;
 
 
 Route::get('/', function (){
@@ -9,7 +10,10 @@ Route::get('/', function (){
     return view('welcome');
 });
 
-Route::post('users',[UsersController::class,'getData']);
+
 Route::view('login','users');
 
 Route::view('test','test');
+
+//Route::get('users',[UserController::class,'index']);
+Route::get('users',[UserController::class,'getData']);

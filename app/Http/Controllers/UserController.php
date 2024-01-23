@@ -3,30 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class UserController extends Controller
 {
-    public function display(){
-        return "Hello world";
+    function index(){
 
-}
+        return DB::select("select * from users");
+    }
 
-public function greeting(){
-    return "Goodnight";
+    function getData(){
 
-}
-
-
-public function aboutme(){
-
-   
-    $x = [1,2,3];
-        
-  
-    return view('about', ['data' => $x]);
-
-}
-
-
+        return "Hi Nakib";
+    }
 
 }

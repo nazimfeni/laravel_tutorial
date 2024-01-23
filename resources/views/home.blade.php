@@ -1,4 +1,12 @@
-<h1>Welcome to Home Page</h1>
+<!-- 
+<x-header /> -->
 
-<a href="/about">About</a>
-<a href="/contact">Contact</a>
+<h2>Welcome to my website</h2>
+<h1>Good Morning {{$name}}</h1>
+
+<script>
+    
+    var message = "Hello, {{ $name }}!";
+
+    alert(message);
+</script>
